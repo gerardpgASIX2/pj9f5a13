@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Examen DevOps</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
     <div class="container mt-5">
         <div class="">
@@ -16,64 +18,78 @@
                 <form action="corregir.php" method="POST">
                     <div class="form-group">
                         <label for="nom">Nom:</label>
-                        <input type="text" class="form-control" id="nom" name="nombre" placeholder="Ingresa el teu Nom" required>
+                        <input type="text" class="form-control" id="nom" name="nombre"
+                            placeholder="Introdueix el teu Nom" required>
                     </div>
                     <div class="form-group">
-                        <label for="email">Correu Electronic:</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Ingresa el teu correu" required>
+                        <label for="email">Correu electrònic:</label>
+                        <input type="email" class="form-control" id="email" name="email"
+                            placeholder="Introdueix el teu correu" required>
                     </div>
-                    
-                    <!-- Preguntas del examen -->
+
+                    <!-- Preguntes de l'examen -->
                     <div class="form-group">
                         <label>1. Què és Git?</label>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta1" value="a"> a) Un sistema operatiu per a desenvolupadors
+                            <input class="form-check-input" type="radio" name="pregunta1" value="a"> a) Un sistema
+                            operatiu per a desenvolupadors
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta1" value="b"> b) Un sistema de control de versions distribuït "SI"
+                            <input class="form-check-input" type="radio" name="pregunta1" value="b"> b) Un sistema de
+                            control de versions distribuït
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta1" value="c"> c) Un repositori en línia per a codi font
+                            <input class="form-check-input" type="radio" name="pregunta1" value="c"> c) Un repositori en
+                            línia per a codi font
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta1" value="d"> d) Un llenguatge de programació
+                            <input class="form-check-input" type="radio" name="pregunta1" value="d"> d) Un llenguatge de
+                            programació
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label>2. Quina diferència hi ha entre Git i GitHub?</label>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta2" value="a"> a) Git és un sistema de control de versions i GitHub és una plataforma per a allotjar repositoris "SI"
+                            <input class="form-check-input" type="radio" name="pregunta2" value="a"> a) Git és un
+                            sistema de control de versions i GitHub és una plataforma per allotjar repositoris
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta2" value="b"> b) No hi ha cap diferència, són el mateix
+                            <input class="form-check-input" type="radio" name="pregunta2" value="b"> b) No hi ha cap
+                            diferència, són el mateix
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta2" value="c"> c) GitHub és una eina per crear repositoris locals sense connexió a internet
+                            <input class="form-check-input" type="radio" name="pregunta2" value="c"> c) GitHub és una
+                            eina per crear repositoris locals sense connexió a internet
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta2" value="d"> d) Git només funciona amb GitHub
+                            <input class="form-check-input" type="radio" name="pregunta2" value="d"> d) Git només
+                            funciona amb GitHub
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label>3. Què és Vagrant?</label>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta3" value="a"> a) Una eina per a gestionar contenidors
+                            <input class="form-check-input" type="radio" name="pregunta3" value="a"> a) Una eina per
+                            gestionar contenidors
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta3" value="b"> b) Un servei de repositoris privats
+                            <input class="form-check-input" type="radio" name="pregunta3" value="b"> b) Un servei de
+                            repositoris privats
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta3" value="c"> c) Una eina per a la gestió d’entorns virtuals "SI"
+                            <input class="form-check-input" type="radio" name="pregunta3" value="c"> c) Una eina per a
+                            la gestió d’entorns virtuals
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta3" value="d"> d) Una distribució de Linux
+                            <input class="form-check-input" type="radio" name="pregunta3" value="d"> d) Una distribució
+                            de Linux
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label>4. 4. Quina comanda de Vagrant s’utilitza per iniciar una màquina virtual?</label>
+                        <label>4. Quina comanda de Vagrant s’utilitza per iniciar una màquina virtual?</label>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="pregunta4" value="a"> a) vagrant start
                         </div>
@@ -91,77 +107,94 @@
                     <div class="form-group">
                         <label>5. Què és Docker?</label>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta5" value="a"> a) Un software de virtualización de maquines virtuals
+                            <input class="form-check-input" type="radio" name="pregunta5" value="a"> a) Un programari de
+                            virtualització de màquines virtuals
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta5" value="b"> b) Una plataforma per a crear, distribuir i executar aplicacions en contenidors "SI"
+                            <input class="form-check-input" type="radio" name="pregunta5" value="b"> b) Una plataforma
+                            per crear, distribuir i executar aplicacions en contenidors
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta5" value="c"> c) Un programari per virtualitzar imatges i executar aplicacions 
+                            <input class="form-check-input" type="radio" name="pregunta5" value="c"> c) Un programari
+                            per virtualitzar imatges i executar aplicacions
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta5" value="d"> d) Un contenidor per executar pagines web 
+                            <input class="form-check-input" type="radio" name="pregunta5" value="d"> d) Un contenidor
+                            per executar pàgines web
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label>6. Quina és la funció de Docker Hub?</label>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta6" value="a"> a) Un sistema de control de versions per a contenidors
+                            <input class="form-check-input" type="radio" name="pregunta6" value="a"> a) Un sistema de
+                            control de versions per a contenidors
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta6" value="b"> b) Un servei de desplegament automàtic de contenidors gratuit
+                            <input class="form-check-input" type="radio" name="pregunta6" value="b"> b) Un servei de
+                            desplegament automàtic de contenidors gratuït
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta6" value="c"> c) Un gestor de dependències per a Docker
+                            <input class="form-check-input" type="radio" name="pregunta6" value="c"> c) Un gestor de
+                            dependències per a Docker
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta6" value="d"> d) Un registre públic i privat per a imatges de Docker "SI"
+                            <input class="form-check-input" type="radio" name="pregunta6" value="d"> d) Un registre
+                            públic i privat per a imatges de Docker
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label>7. Què és Vagrant Cloud?</label>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta7" value="a"> a) Un servei per compartir imatges de màquines virtuals "SI"
+                            <input class="form-check-input" type="radio" name="pregunta7" value="a"> a) Un servei per
+                            compartir imatges de màquines virtuals
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta7" value="b"> b) Un sistema de monitoratge per a Vagrant
+                            <input class="form-check-input" type="radio" name="pregunta7" value="b"> b) Un sistema de
+                            monitoratge per a Vagrant
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta7" value="c"> c) Un sistema de control de versions de Vagrant
+                            <input class="form-check-input" type="radio" name="pregunta7" value="c"> c) Un sistema de
+                            control de versions de Vagrant
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta7" value="d"> d) Un servei per executar contenidors en el núvol
+                            <input class="form-check-input" type="radio" name="pregunta7" value="d"> d) Un servei per
+                            executar contenidors al núvol
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label>8. Selecciona l'afirmació real sobre Vagrant?</label>
+                        <label>8. Selecciona l'afirmació correcta sobre Vagrant?</label>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta8" value="a"> a) Vagrant es un contenidor on executem docker per crear maquines virtual i executar programari.
+                            <input class="form-check-input" type="radio" name="pregunta8" value="a"> a) Vagrant és un
+                            contenidor on executem Docker per crear màquines virtuals i executar programari.
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta8" value="b"> b) Vagrant es una eina per gestionar maquines virtuals de manera automática. "SI"
+                            <input class="form-check-input" type="radio" name="pregunta8" value="b"> b) Vagrant és una
+                            eina per gestionar màquines virtuals de manera automàtica.
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta8" value="c"> c) Vagrant es un programa com virtual box o VMware per crear maquines virtuals de entorns grafics.
+                            <input class="form-check-input" type="radio" name="pregunta8" value="c"> c) Vagrant és un
+                            programa com VirtualBox o VMware per crear màquines virtuals d'entorns gràfics.
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta8" value="d"> d) Vagrant es un lenguatge de programació per crear maquines virtuals.
+                            <input class="form-check-input" type="radio" name="pregunta8" value="d"> d) Vagrant és un
+                            llenguatge de programació per crear màquines virtuals.
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label>9. Quin arxiu és essencial per a configurar un entorn de Vagrant multimàquina?</label>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta9" value="a"> a) Vagrantfile "SI"
+                            <input class="form-check-input" type="radio" name="pregunta9" value="a"> a) Vagrantfile
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="pregunta9" value="b"> b) Dockerfile
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta9" value="c"> c) docker-compose.yml
+                            <input class="form-check-input" type="radio" name="pregunta9" value="c"> c)
+                            docker-compose.yml
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="pregunta9" value="d"> d) vagrant.conf
@@ -169,123 +202,150 @@
                     </div>
 
                     <div class="form-group">
-                        <label>10. Para que sirven Vagrant Box ?</label>
+                        <label>10. Per a què serveixen els Vagrant Box?</label>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta10" value="a"> a) Los Vagrant Box son paquetes de que especifican los entornos de Vagrant como una plantilla proconfigurada. "SI"
+                            <input class="form-check-input" type="radio" name="pregunta10" value="a"> a) Els Vagrant Box
+                            són paquets que especifiquen els entorns de Vagrant com una plantilla preconfigurada.
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta10" value="b"> b) Los vagrant Box son paquetes donde se comprimen los sitemas operativos de Vagrant
+                            <input class="form-check-input" type="radio" name="pregunta10" value="b"> b) Els Vagrant Box
+                            són paquets on es comprimeixen els sistemes operatius de Vagrant
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta10" value="c"> c) Vagrant Box es un sistema de compilación de Vagrant per poder ejecutar maquinas virtuales
+                            <input class="form-check-input" type="radio" name="pregunta10" value="c"> c) Vagrant Box és
+                            un sistema de compilació de Vagrant per poder executar màquines virtuals
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta10" value="d"> d) Vagrant Box es una herramienta que permite crear y gestionar entornos de desarrollo virtualizados
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label>11. ¿Qué es MicroK8s?</label>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta11" value="a"> a) Una herramienta para crear clusters en máquinas virtuales
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta11" value="b"> b) Una versión más ligera de Kubernetes, ideal para desarrolladores y entornos locales.
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta11" value="c"> c) Un servicio en la nube para gestionar Kubernetes.
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta11" value="d"> d) Un servicio de monitoreo para aplicaciones en Kubernetes.
+                            <input class="form-check-input" type="radio" name="pregunta10" value="d"> d) Vagrant Box és
+                            una eina que permet crear i gestionar entorns de desenvolupament virtualitzats
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label>12. ¿Para qué se utiliza Jenkins en el desarrollo de software?</label>
+                        <label>11. Què és MicroK8s?</label>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta11" value="a"> a) Para gestionar la base de datos de la aplicación.
+                            <input class="form-check-input" type="radio" name="pregunta11" value="a"> a) Una eina per
+                            crear clústers en màquines virtuals
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta11" value="b"> b) Para automatizar la integración continua y despliegue continuo (CI/CD). 
+                            <input class="form-check-input" type="radio" name="pregunta11" value="b"> b) Una versió més
+                            lleugera de Kubernetes, ideal per a desenvolupadors i entorns locals.
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta11" value="c"> c) Para crear aplicaciones web desde cero.
+                            <input class="form-check-input" type="radio" name="pregunta11" value="c"> c) Un servei al
+                            núvol per gestionar Kubernetes.
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta11" value="d"> d) Para realizar pruebas de estrés en el sistema.
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label>13. ¿Qué función cumple Ngrok en un entorno de desarrollo?</label>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta11" value="a"> a) Crear servidores de bases de datos en la nube.
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta11" value="b"> b) Exponer aplicaciones locales a internet a través de túneles seguros.
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta11" value="c"> c) Proteger el código fuente de aplicaciones en producción.
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta11" value="d"> d) Automatizar el despliegue de aplicaciones a la nube
+                            <input class="form-check-input" type="radio" name="pregunta11" value="d"> d) Un servei de
+                            monitoratge per a aplicacions en Kubernetes.
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label>14. ¿Qué es un Webhook en el contexto de aplicaciones web?</label>
+                        <label>12. Per a què s'utilitza Jenkins en el desenvolupament de programari?</label>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta11" value="a"> a) Un tipo de servidor web que procesa múltiples solicitudes simultáneamente.
+                            <input class="form-check-input" type="radio" name="pregunta12" value="a"> a) Per gestionar
+                            la base de dades de l'aplicació.
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta11" value="b"> b) Un sistema de mensajería entre usuarios en una red social.
+                            <input class="form-check-input" type="radio" name="pregunta12" value="b"> b) Per
+                            automatitzar la integració contínua i desplegament continu (CI/CD).
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta11" value="c"> c) Un mecanismo para recibir notificaciones en tiempo real de eventos de otros servicios. "SI"
+                            <input class="form-check-input" type="radio" name="pregunta12" value="c"> c) Per crear
+                            aplicacions web des de zero.
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta11" value="d"> d) Un método de almacenamiento de datos en la nube.
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label>15. ¿Cuál es la principal ventaja de usar Kubernetes en la gestión de contenedores?</label>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta11" value="a"> a) Proveer una interfaz gráfica para gestionar los contenedores.
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta11" value="b"> b) Gestionar automáticamente la distribución y el escalado de contenedores en clusters. "SI"
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta11" value="c"> c) Solo permite la ejecución de aplicaciones en contenedores Docker.
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta11" value="d"> d) Simplificar la creación de imágenes de contenedores.
+                            <input class="form-check-input" type="radio" name="pregunta12" value="d"> d) Per realitzar
+                            proves d'estrès al sistema.
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label>16. ¿Qué significa que un sistema sea escalable?</label>
+                        <label>13. Quina funció compleix Ngrok en un entorn de desenvolupament?</label>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta11" value="a"> a) Que puede manejar un número casi infinito de usuarios.
+                            <input class="form-check-input" type="radio" name="pregunta13" value="a"> a) Crear servidors
+                            de bases de dades al núvol.
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta11" value="b"> b) Que puede operar solo sin supervisión de algun administrador
+                            <input class="form-check-input" type="radio" name="pregunta13" value="b"> b) Crear una
+                            connexió pública a una màquina local per fer proves en temps real.
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta11" value="c"> c) Que puede aumentar su capacidad de manera automática sin perder rendimiento.
+                            <input class="form-check-input" type="radio" name="pregunta13" value="c"> c) Crear una
+                            màquina virtual per executar codi Python.
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pregunta11" value="d"> d) Que puede ser modificado para adaptarse a nuevos requerimientos sin cambiar su arquitectura.
+                            <input class="form-check-input" type="radio" name="pregunta13" value="d"> d) Gestionar
+                            configuracions de sistemes operatius de màquines virtuals.
                         </div>
                     </div>
 
-                    <div class="text-center">
-                        <button type="submit" class="btn btn-success">Enviar</button>
+                    <div class="form-group">
+                        <label>14. Que és un Webhook?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="pregunta14" value="a"> a) Gestionar la
+                            infraestructura com a codi, permetent definir, aprovisionar i gestionar recursos de manera
+                            declarativa.
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="pregunta14" value="b"> b) Un script per
+                            configurar els permisos dels repositoris de Github.
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="pregunta14" value="c"> c) Es una
+                            configuració dins de Github que permet que jenkins es comunique amb Github.
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="pregunta14" value="d"> d) És un mecanisme
+                            que permet enviardades automàticament a altres aplicacions en temps real.
+                        </div>
                     </div>
-                </form>
+
+                    <div class="form-group">
+                        <label>15. Què és Kubernetes?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="pregunta15" value="a"> a) Una eina de
+                            desplegament automàtic en entorns de producció.
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="pregunta15" value="b"> b) Un sistema de
+                            control de versions distribuït.
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="pregunta15" value="c"> c) Un sistema de
+                            gestió d'orquestració de contenidors a gran escala.
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="pregunta15" value="d"> d) Un sistema
+                            operatiu per a màquines virtuals.
+                        </div>
+                    </div>
+
+                    <label>16. ¿Qué significa que un sistema sea escalable?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="pregunta16" value="a"> a) Que puede manejar
+                        un número casi infinito de usuarios.
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="pregunta16" value="b"> b) Que puede operar
+                        solo sin supervisión de algun administrador
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="pregunta16" value="c"> c) Que puede aumentar
+                        su capacidad de manera automática sin perder rendimiento.
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="pregunta16" value="d"> d) Que puede ser
+                        modificado para adaptarse a nuevos requerimientos sin cambiar los componentes ni el codigo.
+                    </div>
             </div>
+
+            <button type="submit" class="btn btn-primary">Enviar Examen</button>
+            </form>
         </div>
     </div>
+    </div>
 </body>
+
 </html>
