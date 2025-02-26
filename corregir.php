@@ -58,6 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Redondear valores sin decimales:
     if ($puntInicials == floor($puntInicials)) {
         echo "<h2>Tu puntInicials final es: " . (int)$puntInicials . " de 10</h2>";
+        
     } else {
         echo "<h2>Tu puntInicials final es: " . number_format($puntInicials, 2) . " de 10</h2>";
     }
@@ -74,12 +75,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' rel='stylesheet'>
             </head>
             <body>
-                <div class='container-lg'>
+                <div class='container-sm'>
                     <h2>Resultat de l'examen:</h2>
                     <table class='table table-hover'>
                         <thead>
                             <tr>
                                 <th scope='col'>Estat</th>
+                                <th scope='col'>Nº Preguntes</th>
                                 <th scope='col'>Respostes correctes</th>
                                 <th scope='col'>Respostes incorrectes</th>
                                 <th scope='col'>Qualificació / 10</th>
@@ -88,9 +90,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </thead>
                         <tbody>
                             <tr>
-                                <th scope='row' class='>". date('l jS \of F Y h:i:s A'). "</th>
-                                <td>Finalitzat (usar variable data)</td>
-                                <td>Nota sobre 16</td>
+                                <th scope='row'>". date('jS F Y h:i:s A'). "</th>
+                                <td> $preguntesTotals </td>
+                                <td> $numPreguntes_correctes </td>
+                                <td> $numPreguntes_incorrectes </td>
+                                <td>""</td>
                                 <td>nota sobre 10</td>
                             </tr>
                         </tbody>
