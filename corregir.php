@@ -1,6 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
+    // Llistat de respostes correctes
     $respostes_correctes = [
         "pregunta1" => "b", 
         "pregunta2" => "a",  
@@ -25,10 +26,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     $puntInicials = 0;  //puntuatge inicial
     $penalizacion = 1 / 3;  // Penalizació por resposta incorrecta
-    $preguntesTotals = count($respostes_correctes); 
-    $valor_resposta = 10 / $preguntesTotals;  // calcular valor per resposta 
-    echo "<p> Numero de preguntes </p>". $preguntesTotals;
-    
+    $preguntesTotals = count($respostes_correctes); // contar numero de preguntes
+    // echo $preguntesTotals;
+    $valor_resposta = 10 / $preguntesTotals;  // calcular valor per resposta     
     $numPreguntes_correctes = 0; // contador respostes correctes
     $numPreguntes_incorrectes = 0; // contador respostes incorrectes
     
@@ -50,22 +50,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Aseguramos que el puntInicials no sea negativo ni mayor a 10
     $puntInicials = max(0, min(10, $puntInicials));
     
-    // Mostramos el resultado con nombre y correo
-    echo "<h2>Resultat de l'examen:</h2>";
-    echo "<p><strong>Nom:</strong> " . htmlspecialchars($nom) . "</p>";
-    echo "<p><strong>Correu electrònic:</strong> " . htmlspecialchars($email) . "</p>";
+    // funcio redondear valor final:
+    function obtenerNotaFinal($puntInicials) {
+        if ($puntInicials == floor($puntInicials)) {
+            return (int)$puntInicials;
+        } else {
+            return number_format($puntInicials, 2);
+        }
+    }
     
-    // Redondear valores sin decimales:
-    if ($puntInicials == floor($puntInicials)) {
-        echo "<h2>Tu puntInicials final es: " . (int)$puntInicials . " de 10</h2>";
-        
-    } else {
-        echo "<h2>Tu puntInicials final es: " . number_format($puntInicials, 2) . " de 10</h2>";
+// Función verificar si aprobar o suspender:
+    function verificarAprobacion($puntInicials) {
+        $notaFinal = obtenerNotaFinal($puntInicials);
+    
+        if ($puntInicials >= 5 && $puntInicials <= 10) {
+            return "<p class='text-success'> Aprobat </p>";  // Has aprobado
+        } else if ($puntInicials >= 0 && $puntInicials < 5) {
+            return "<p class='text-danger'> Suspes </p>";  // Has suspendido
+        }
     }
 
-    // Mostrar la cantidad de respuestas correctas e incorrectas
-    echo "<p><strong>Respuestas correctas:</strong> " . $numPreguntes_correctes . "</p>";
-    echo "<p><strong>Respuestas incorrectas:</strong> " . $numPreguntes_incorrectes . "</p>";
+    // Mostrar Tabla de resultats
     echo "<!DOCTYPE html>
             <html lang='en'>
             <head>
@@ -75,7 +80,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' rel='stylesheet'>
             </head>
             <body>
-                <div class='container-sm'>
+                <div class='container-sm pt-3'>
                     <h2>Resultat de l'examen:</h2>
                     <table class='table table-hover'>
                         <thead>
@@ -94,20 +99,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <td> $preguntesTotals </td>
                                 <td> $numPreguntes_correctes </td>
                                 <td> $numPreguntes_incorrectes </td>
-                                <td>""</td>
-                                <td>nota sobre 10</td>
+                                <td> " . obtenerNotaFinal($puntInicials) . "</td>
+                                <td>" . verificarAprobacion($puntInicials) . "</td>
                             </tr>
                         </tbody>
                     </table>
-                    <h3>La vostra qualificació final en aquest qüestionari és (notaFinal) /10,00.</h2>
+                    <h3>La vostra qualificació final en aquest qüestionari és " . obtenerNotaFinal($puntInicials) . " /10,00.</h2>
+                    <a href='index.html'><button type='button' class='mt-3 btn btn-primary'>Volver a las preguntas</button></a>
                 </div>
             </body>
             </html>";
 
-    echo '<br><a href="index.html"><button type="button">Volver a las preguntas</button></a>';
-
 } else {
     echo "<h2>Error: No hi ha cap resultat.</h2>";
-    echo '<br><a href="index.html"><button type="button">Volver a las preguntas</button></a>';
+    echo '<br><a href="index.html"><button type="button" class="mt-3 btn btn-primary">Volver a las preguntas</button></a>';
 }
 ?>
