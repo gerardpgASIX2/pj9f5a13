@@ -19,13 +19,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         "pregunta14" => "d",
         "pregunta15" => "b",
         "pregunta16" => "c",
+        "pregunta17" => "a",
+        "pregunta18" => "b",
+        "pregunta19" => "b",
+        "pregunta20" => "b",
     ];
 
     $nom = $_POST['nombre'];  // agafar nom alumne
     $email = $_POST['email']; // agafar email alumne
+    $cicle = $_POST['cicle']; // agafar cicle
+    $curs = $_POST['curs']; // agafar curs
+    // echo $nom, $email, $cicle, $curs;
     
     $puntInicials = 0;  //puntuatge inicial
-    $penalizacion = 1 / 3;  // Penalizació por resposta incorrecta
+    $penalizacion = 1 / 3;  // Penalitzacio por resposta incorrecta
     $preguntesTotals = count($respostes_correctes); // contar numero de preguntes
     // echo $preguntesTotals;
     $valor_resposta = 10 / $preguntesTotals;  // calcular valor per resposta     
@@ -35,16 +42,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     foreach ($respostes_correctes as $pregunta => $respuesta_correcta) {
         if (isset($_POST[$pregunta])) {
             if ($_POST[$pregunta] == $respuesta_correcta) {
-                // Respuesta correcta: sumamos el valor correspondiente
+                // Resposta correcta: sumamos el valor correspondiente
                 $puntInicials += $valor_resposta;
-                $numPreguntes_correctes++;  // Aumentamos el contador de respuestas correctas
+                $numPreguntes_correctes++;  // sumar al contador de respostes correctes
             } else {
-                // Respuesta incorrecta: penalizamos un tercio de punto
+                // Resposta incorrecta: penalizamos un tercio de punto
                 $puntInicials -= $penalizacion;
-                $numPreguntes_incorrectes++;  // Aumentamos el contador de respuestas incorrectas
+                $numPreguntes_incorrectes++;  // sumar al contador de respostes incorrectes
             }
         }
-        // Si no se respondió, no hacemos nada (ni penalización ni puntos sumados)
     }
 
     // Aseguramos que el puntInicials no sea negativo ni mayor a 10
@@ -59,14 +65,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
     
-// Función verificar si aprobar o suspender:
+    // Función verificar si aprobar o suspender:
     function verificarAprobacion($puntInicials) {
         $notaFinal = obtenerNotaFinal($puntInicials);
     
         if ($puntInicials >= 5 && $puntInicials <= 10) {
-            return "<p class='text-success'> Aprobat </p>";  // Has aprobado
+            return "<p class='text-success'> Aprobat </p>";  // Has aprobat
         } else if ($puntInicials >= 0 && $puntInicials < 5) {
-            return "<p class='text-danger'> Suspes </p>";  // Has suspendido
+            return "<p class='text-danger'> Suspes </p>";  // Has suspes
         }
     }
 
@@ -82,6 +88,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <body>
                 <div class='container-sm pt-3'>
                     <h2>Resultat de l'examen:</h2>
+                    <p> Alumne: $nom, amb correu $email</p>
+                    <p> Cursant actualment: $cicle $curs any</p>
                     <table class='table table-hover'>
                         <thead>
                             <tr>
@@ -95,7 +103,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </thead>
                         <tbody>
                             <tr>
-                                <th scope='row'>". date('jS F Y h:i:s A'). "</th>
+                                <td>". date('jS F Y h:i:s A'). "</td>
                                 <td> $preguntesTotals </td>
                                 <td> $numPreguntes_correctes </td>
                                 <td> $numPreguntes_incorrectes </td>

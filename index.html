@@ -24,12 +24,25 @@
                     <div class="form-group">
                         <label for="email">Correu electrònic:</label>
                         <input type="email" class="form-control" id="email" name="email"
-                            placeholder="Introdueix el teu correu" required>
+                            placeholder="Introdueix el teu correu">
                     </div>
-
+                    <div class="form-group">
+                        <label for="cars">Cicle:</label>
+                        <select class="form-control" id="cicle" name="cicle" aria-label="Large select example" required>
+                            <option selected disabled>Selecciona el teu cicle</option>
+                            <option value="DAM">DAM</option>
+                            <option value="DAW">DAW</option>
+                            <option value="ASIX">ASIX</option>
+                        </select>
+                        <select class="form-control form-control-sm mt-2" id="curs" name="curs" aria-label="Small select example" required>
+                            <option selected disabled required>Curs</option>
+                            <option value="1r">1r</option>
+                            <option value="2n">2n</option>
+                        </select>
+                    </div>
                     <!-- Preguntes de l'examen -->
                     <div class="form-group">
-                        <label>1. Què és Git?</label>
+                        <label class="font-weight-bold">1. Què és Git?</label>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="pregunta1" value="a"> a) Un sistema
                             operatiu per a desenvolupadors
@@ -49,7 +62,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label>2. Quina diferència hi ha entre Git i GitHub?</label>
+                        <label class="font-weight-bold">2. Quina diferència hi ha entre Git i GitHub?</label>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="pregunta2" value="a"> a) Git és un
                             sistema de control de versions i GitHub és una plataforma per allotjar repositoris
@@ -69,7 +82,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label>3. Què és Vagrant?</label>
+                        <label class="font-weight-bold">3. Què és Vagrant?</label>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="pregunta3" value="a"> a) Una eina per
                             gestionar contenidors
@@ -89,7 +102,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label>4. Quina comanda de Vagrant s’utilitza per iniciar una màquina virtual?</label>
+                        <label class="font-weight-bold">4. Quina comanda de Vagrant s’utilitza per iniciar una màquina virtual?</label>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="pregunta4" value="a"> a) vagrant start
                         </div>
@@ -105,7 +118,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label>5. Què és Docker?</label>
+                        <label class="font-weight-bold">5. Què és Docker?</label>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="pregunta5" value="a"> a) Un programari de
                             virtualització de màquines virtuals
@@ -125,7 +138,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label>6. Quina és la funció de Docker Hub?</label>
+                        <label class="font-weight-bold">6. Quina és la funció de Docker Hub?</label>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="pregunta6" value="a"> a) Un sistema de
                             control de versions per a contenidors
@@ -145,7 +158,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label>7. Què és Vagrant Cloud?</label>
+                        <label class="font-weight-bold">7. Què és Vagrant Cloud?</label>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="pregunta7" value="a"> a) Un servei per
                             compartir imatges de màquines virtuals
@@ -165,7 +178,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label>8. Selecciona l'afirmació correcta sobre Vagrant?</label>
+                        <label class="font-weight-bold">8. Selecciona l'afirmació correcta sobre Vagrant?</label>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="pregunta8" value="a"> a) Vagrant és un
                             contenidor on executem Docker per crear màquines virtuals i executar programari.
@@ -185,7 +198,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label>9. Quin arxiu és essencial per a configurar un entorn de Vagrant multimàquina?</label>
+                        <label class="font-weight-bold">9. Quin arxiu és essencial per a configurar un entorn de Vagrant multimàquina?</label>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="pregunta9" value="a"> a) Vagrantfile
                         </div>
@@ -202,7 +215,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label>10. Per a què serveixen els Vagrant Box?</label>
+                        <label class="font-weight-bold">10. Per a què serveixen els Vagrant Box?</label>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="pregunta10" value="a"> a) Els Vagrant Box
                             són paquets que especifiquen els entorns de Vagrant com una plantilla preconfigurada.
@@ -222,7 +235,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label>11. Què és MicroK8s?</label>
+                        <label class="font-weight-bold">11. Què és MicroK8s?</label>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="pregunta11" value="a"> a) Una eina per
                             crear clústers en màquines virtuals
@@ -242,7 +255,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label>12. Per a què s'utilitza Jenkins en el desenvolupament de programari?</label>
+                        <label class="font-weight-bold">12. Per a què s'utilitza Jenkins en el desenvolupament de programari?</label>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="pregunta12" value="a"> a) Per gestionar
                             la base de dades de l'aplicació.
@@ -262,7 +275,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label>13. Quina funció compleix Ngrok en un entorn de desenvolupament?</label>
+                        <label class="font-weight-bold">13. Quina funció compleix Ngrok en un entorn de desenvolupament?</label>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="pregunta13" value="a"> a) Crear servidors
                             de bases de dades al núvol.
@@ -282,7 +295,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label>14. Que és un Webhook?</label>
+                        <label class="font-weight-bold">14. Que és un Webhook?</label>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="pregunta14" value="a"> a) Gestionar la
                             infraestructura com a codi, permetent definir, aprovisionar i gestionar recursos de manera
@@ -303,7 +316,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label>15. Què és Kubernetes?</label>
+                        <label class="font-weight-bold">15. Què és Kubernetes?</label>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="pregunta15" value="a"> a) Una eina de
                             desplegament automàtic en entorns de producció.
@@ -322,23 +335,81 @@
                         </div>
                     </div>
 
-                    <label>16. ¿Qué significa que un sistema sea escalable?</label>
+                    <label class="font-weight-bold">16. Qué significa que un sistema sigui escalable?</label>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="pregunta16" value="a"> a) Que puede manejar
-                        un número casi infinito de usuarios.
+                        <input class="form-check-input" type="radio" name="pregunta16" value="a"> a) Que pot manejar
+                        un número casi infinit de usuaris.
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="pregunta16" value="b"> b) Que puede operar
-                        solo sin supervisión de algun administrador
+                        <input class="form-check-input" type="radio" name="pregunta16" value="b"> b) Que pot operar
+                        solo sense supervisió d'algun administrador
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="pregunta16" value="c"> c) Que puede aumentar
-                        su capacidad de manera automática sin perder rendimiento.
+                        <input class="form-check-input" type="radio" name="pregunta16" value="c"> c) Que pot aumentar
+                        la seva capacitat de manera automàtica sense perdre rendiment.
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="pregunta16" value="d"> d) Que puede ser
-                        modificado para adaptarse a nuevos requerimientos sin cambiar los componentes ni el codigo.
+                        <input class="form-check-input" type="radio" name="pregunta16" value="d"> d) Que pot ser
+                        modificat per adaptar-se a nous requeriments sense canviar els components ni el codi.
                     </div>
+
+                    <label class="font-weight-bold">17. Qué es la integració continua (CI) d'una aplicació?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="pregunta16" value="a"> a) Permet que un equip de desenvolupadors puguin treballar de manera conjunta però dedicant-se
+                        cadascú a desenvolupar i actualitzar parts diferents del codi.
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="pregunta16" value="b"> b) Quan un desenvolupador ha finalitzat una actualització del codi, sense fer res mes un altre membre pot seguir on ho ha deixat el desenvolupador anterior
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="pregunta16" value="c"> c) Que encara que finalitzi el projecte s'integren actualitzacións continuament sense el suport i actualització de cap persona de manera automatica.
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="pregunta16" value="d"> d) Que el mateix sistema s'integra a la perfecció amb cualsevol llenguatge de programació y en cualsevol situació automaticament.
+                    </div>
+
+                    <label class="font-weight-bold">18. Quina de les següents opcions descriu millor la fase de Desenvolupament en CI/CD?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="pregunta16" value="a"> a) Els desenvolupadors treballen conjuntament i actualitzen el codi en un dipòsit, però les modificacions no es comproven fins que arriben a producció.
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="pregunta16" value="b"> b) Els desenvolupadors treballen de manera independent i les modificacions es comproven manualment abans de ser pujades al dipòsit.
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="pregunta16" value="c"> c) Els desenvolupadors treballen conjuntament, actualitzen el codi contínuament en un dipòsit i es realitzen comprovacions per garantir el correcte funcionament del codi.
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="pregunta16" value="d"> d)  Els desenvolupadors només treballen quan el codi ja ha arribat a producció.
+                    </div>
+
+                    <label class="font-weight-bold">19. Quina funció té la Distribució/Desplegament Continu (CD) en el procés CI/CD?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="pregunta16" value="a"> a) Permet que els desenvolupadors puguin treballar de manera independent sense cap interferència.
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="pregunta16" value="b"> b) Comprova que les actualitzacions funcionen a l'entorn de producció abans de ser disponibles pels usuaris i es poden desplegar automàticament.
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="pregunta16" value="c"> c) Realitza les comprovacions del codi només en fase de desenvolupament
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="pregunta16" value="d"> d) Permet fer canvis al codi en producció sense la necessitat de provar-los prèviament
+                    </div>
+
+                    <label class="font-weight-bold">20. Quina eina és mencionada com una de les més populars per a la creació de pipelines CI/CD?</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="pregunta16" value="a"> a) Jira
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="pregunta16" value="b"> b) Jenkins
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="pregunta16" value="c"> c) Docker
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="pregunta16" value="d"> d) VS Code
+                    </div>
+
                     <div class="row">
                         <div class="col text-center">
                             <button type="submit" class="mt-5 btn btn-primary">Enviar Examen</button>
@@ -348,7 +419,5 @@
             </form>
         </div>
     </div>
-
 </body>
-
 </html>
